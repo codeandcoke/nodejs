@@ -1,0 +1,16 @@
+{
+  "name": "sample2-backend",
+  "version": "0.1",
+  "description": "A sample project to learn Node.js",
+  "main": "sample2.js",
+  "type": "module",
+  "scripts": {
+    "start": "node sample2.js"
+  },
+  "author": "Santiago Faci",
+  "license": "GPL-2.0-only",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.1"
+  }
+}
