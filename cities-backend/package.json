@@ -1,0 +1,15 @@
+{
+  "name": "My first Node.js sample project",
+  "version": "0.1",
+  "description": "A sample project to learn Node.js",
+  "main": "sample1.js",
+  "scripts": {
+    "start": "node sample1.js"
+  },
+  "author": "Santiago Faci",
+  "license": "GPL-2.0-only",
+  
+  "dependencies": {
+    "express": "^4.21.1"
+  }
+}
