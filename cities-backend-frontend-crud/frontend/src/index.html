@@ -12,6 +12,22 @@
             <img src="nodejs.png"/>
             <ul id="cities" class="list-group">
             </ul>
+            <hr/>
+            <form>
+                <div class="mb-3">
+                    <label for="name" class="form-label">Nombre</label>
+                    <input class="form-control" type="text" id="name"/>
+                </div>
+                <div class="mb-3">
+                    <label for="altitude" class="form-label">Altitud</label>
+                    <input class="form-control" type="text" id="altitude"/>
+                </div>
+                <div class="mb-3">
+                    <label for="population" class="form-label">Población</label>
+                    <input class="form-control" type="text" id="population"/>
+                </div>
+                <button type="button" class="btn btn-primary" onClick="addCity()">Add city</button>
+            </form>
         </div>
     </body>
 </html>
