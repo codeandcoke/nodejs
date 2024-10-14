@@ -1,5 +1,6 @@
 {
-    "name": "sample2-frontend",
+    "name": "cities-frontend",
+    "type": "module",
     "source": "src/index.html",
     "scripts": {
         "start": "parcel --no-cache",

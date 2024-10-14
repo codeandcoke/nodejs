@@ -1,6 +1,8 @@
-const express = require('express');
+import express from 'express';
+import cors from 'cors';
 
 const app = express();
+app.use(cors());
 app.use(express.json());
 
 const cities = {
@@ -27,6 +29,18 @@ app.get('/city/:city', (req, res) => {
     res.json(cities[city]);
 });
 
+app.post('/cities', (req, res) => {
+    const name = req.body.name;
+    const altitudeValue = req.body.altitude;
+    const populationValue = req.body.population;
+
+    cities[name] = {
+        altitude: altitudeValue,
+        population: populationValue
+    };
+    console.log(cities);
+    res.status(201).end();
+});
 
 app.listen(8080, () => {
     console.log('Iniciando el backend en el puerto 8080');

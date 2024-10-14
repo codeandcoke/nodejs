@@ -2,6 +2,7 @@
     "name": "cities-frontend",
     "version": "0.1",
     "source": "src/index.html",
+    "type": "module",
     "scripts": {
         "start": "parcel --no-cache",
         "build": "parcel build"

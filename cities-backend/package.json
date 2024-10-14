@@ -1,10 +1,10 @@
 {
-  "name": "My first Node.js sample project",
+  "name": "cities-backend",
   "version": "0.1",
   "description": "A sample project to learn Node.js",
-  "main": "sample1.js",
+  "type": "module",
   "scripts": {
-    "start": "node sample1.js"
+    "start": "node src/app.js"
   },
   "author": "Santiago Faci",
   "license": "GPL-2.0-only",
