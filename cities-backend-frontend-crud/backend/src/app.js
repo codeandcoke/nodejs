@@ -20,15 +20,24 @@ const cities = {
     }
 };
 
+/**
+ * Operación que devuelve el listado completo de las ciudades
+ */
 app.get('/cities', (req, res) => {
     res.json(cities);
 });
 
+/**
+ * Operación que devuelve los detalles de una ciudad
+ */
 app.get('/city/:city', (req, res) => {
     const city = req.params.city;
     res.json(cities[city]);
 });
 
+/**
+ * Operación que registra una nueva ciudad
+ */
 app.post('/cities', (req, res) => {
     const name = req.body.name;
     const altitudeValue = req.body.altitude;
