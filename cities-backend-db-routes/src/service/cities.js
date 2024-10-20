@@ -1,4 +1,4 @@
-const db = require('../configuration/database.js').db;
+const { db } = require('../configuration/database.js');
 
 // Operación que devuelve todas las ciudades de la base de datos
 const findAllCities = (async () => {
