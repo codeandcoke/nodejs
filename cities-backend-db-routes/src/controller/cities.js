@@ -1,44 +1,36 @@
-const db = require('../configuration/database.js').db;
+const { findAllCities, findCity, registerCity, modifyCity, removeCity} = require('../service/cities.js');
 
 // Operación que devuelve todas las ciudades de la base de datos
 const getCities = (async (req, res) => {
-    const result = await db('cities').select('*');
+    const data = await findAllCities();
 
-    res.status(200).json(result);
+    res.status(200).json(data);
 });
 
 // Operación que devuelve una ciudad determinada
 const getCity = (async (req, res) => {
-    const result = await db('cities').select('*').where({name: req.params.city}).first();
+    const data = await findCity(req.params.city);
 
-    res.status(200).json(result);
+    res.status(200).json(data);
 });
 
 // Operación que registra una nueva ciudad en la base de datos
 const postCity = (async (req, res) => {
-    await db('cities').insert({
-        name: req.body.name,
-        population: req.body.population,
-        altitude: req.body.altitude
-    });
+    await registerCity(req.body.name, req.body.population, req.body.altitude);
 
     res.status(201).json({});
 });
 
 // Operación que modifica una ciudad en la base de datos
 const putCity = (async (req, res) => {
-    await db('cities').where({ name: req.params.city }).update({
-        population: req.body.population,
-        altitude: req.body.altitude
-    });
+    await modifyCity(req.params.city, req.body.population, req.body.altitude);
 
     res.status(204).json({});
 });
 
 // Operación que elimina una ciudad de la base de datos
 const deleteCity = (async (req, res) => {
-    const cityName = req.params.city;
-    await db('cities').del().where({name: cityName});
+    await removeCity(req.params.city);
 
     res.status(204).json({})
 });
