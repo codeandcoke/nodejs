@@ -30,7 +30,7 @@ app.get('/cities', (req, res) => {
 /**
  * Operación que devuelve los detalles de una ciudad
  */
-app.get('/city/:city', (req, res) => {
+app.get('/cities/:city', (req, res) => {
     const city = req.params.city;
     res.json(cities[city]);
 });

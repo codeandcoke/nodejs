@@ -22,7 +22,7 @@ app.get('/cities', (req, res) => {
     res.json(cities);
 });
 
-app.get('/city/:city', (req, res) => {
+app.get('/cities/:city', (req, res) => {
     const city = req.params.city;
     res.json(cities[city]);
 });
