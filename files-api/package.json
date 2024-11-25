@@ -1,0 +1,15 @@
+{
+    "name": "files-api",
+    "version": "0.1",
+    "description": "A sample project to show how to handle files",
+    "scripts": {
+        "start": "node src/app.js"
+    },
+    "author": "Santiago Faci",
+    "license": "GPL-2.0-only",
+    "dependencies": {
+        "express": "^4.21.1",
+        "multer": "^1.4.5-lts.1",
+        "cors": "2.8.5"
+    }
+}
