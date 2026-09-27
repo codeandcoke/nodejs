@@ -1,4 +1,4 @@
-const { findAllCities, findCity, registerCity, modifyCity, removeCity} = require('../service/cities.js');
+import { findAllCities, findCity, registerCity, modifyCity, removeCity} from '../service/cities.js';
 
 // Operación que devuelve todas las ciudades de la base de datos
 const getCities = (async (req, res) => {
@@ -35,7 +35,7 @@ const deleteCity = (async (req, res) => {
     res.status(204).json({})
 });
 
-module.exports = {
+export {
     getCities,
     getCity,
     postCity,
