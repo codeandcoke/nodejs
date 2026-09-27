@@ -2,6 +2,7 @@
   "name": "cities-backend-db-routes",
   "version": "0.1",
   "description": "A sample project to learn Node.js",
+  "type": "module",
   "scripts": {
     "start": "node src/app.js"
   },

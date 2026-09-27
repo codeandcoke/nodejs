@@ -1,4 +1,4 @@
-const { db } = require('../configuration/database.js');
+import { db } from '../configuration/database.js';
 
 // Operación que devuelve todas las ciudades de la base de datos
 const findAllCities = (async () => {
@@ -40,7 +40,7 @@ const removeCity = (async (cityName) => {
     return result;
 });
 
-module.exports = {
+export {
     findAllCities,
     findCity,
     registerCity,

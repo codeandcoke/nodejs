@@ -1,12 +1,14 @@
-const express = require('express');
-const router = express.Router();
+import express from 'express';
+const citiesRouter = express.Router();
 
-const { getCities, getCity, postCity, putCity, deleteCity } = require('../controller/cities.js');
+import { getCities, getCity, postCity, putCity, deleteCity } from '../controller/cities.js';
 
-router.get('/cities', getCities);
-router.get('/cities/:city', getCity);
-router.post('/cities', postCity);
-router.put('/cities/:city', putCity);
-router.delete('/cities/:city', deleteCity);
+citiesRouter.get('/cities', getCities);
+citiesRouter.get('/cities/:city', getCity);
+citiesRouter.post('/cities', postCity);
+citiesRouter.put('/cities/:city', putCity);
+citiesRouter.delete('/cities/:city', deleteCity);
 
-module.exports = router;
+export {
+    citiesRouter
+}
