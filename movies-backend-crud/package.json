@@ -1,0 +1,15 @@
+{
+  "name": "movies-backend",
+  "version": "0.1",
+  "description": "An API about movies",
+  "type": "module",
+  "scripts": {
+    "start": "node src/app.js"
+  },
+  "author": "Santiago Faci",
+  "license": "GPL-2.0-only",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^4.21.1"
+  }
+}
